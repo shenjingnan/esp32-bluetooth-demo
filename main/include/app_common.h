@@ -10,6 +10,10 @@
 #include <stdbool.h>
 #include "esp_gap_bt_api.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /* 设备名称最大长度 */
 #define BT_MAX_NAME_LEN 64
 
@@ -63,5 +67,9 @@ typedef struct {
     bt_device_info_t device;
     char message[64];
 } sse_event_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* APP_COMMON_H */

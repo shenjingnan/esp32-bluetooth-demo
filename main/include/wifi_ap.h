@@ -8,6 +8,10 @@
 
 #include "esp_err.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief 初始化 WiFi AP 模块
  *
@@ -32,5 +36,9 @@ const char* wifi_ap_get_ssid(void);
  * @return IP 地址字符串
  */
 const char* wifi_ap_get_ip(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* WIFI_AP_H */

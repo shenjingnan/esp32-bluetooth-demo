@@ -9,6 +9,10 @@
 #include "esp_err.h"
 #include "app_common.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief 初始化蓝牙管理器
  *
@@ -75,5 +79,9 @@ esp_err_t bt_manager_unpair_device(esp_bd_addr_t bda);
  * @return ESP_OK 成功
  */
 esp_err_t bt_manager_get_paired_devices(bt_device_info_t *devices, uint8_t *count);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* BT_MANAGER_H */
