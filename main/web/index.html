@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 蓝牙配对</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ESP32 蓝牙配对</h1>
+            <p class="subtitle">发现并连接蓝牙设备</p>
+        </header>
+
+        <div class="status-bar">
+            <span id="scanStatus">状态: 空闲</span>
+            <span id="deviceCount">已发现: 0 台设备</span>
+        </div>
+
+        <div class="controls">
+            <button id="scanBtn" class="btn btn-primary">扫描设备</button>
+            <button id="stopBtn" class="btn btn-secondary" disabled>停止扫描</button>
+        </div>
+
+        <div id="deviceList" class="device-list">
+            <div class="empty-state">
+                <p>点击"扫描设备"开始搜索附近的蓝牙设备</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
