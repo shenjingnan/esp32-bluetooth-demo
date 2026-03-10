@@ -8,6 +8,10 @@
 
 #include "esp_err.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief 启动 HTTP 服务器
  *
@@ -32,5 +36,9 @@ esp_err_t http_server_stop(void);
  * @param message 消息（可选）
  */
 void http_server_send_event(int event_type, void *device, const char *message);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* HTTP_SERVER_H */
